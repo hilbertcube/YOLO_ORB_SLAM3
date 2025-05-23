@@ -40,7 +40,7 @@ mv libtorch/ PATH/YOLO_ORB_SLAM3/Thirdparty/
 
 ```bash
 wget https://download.pytorch.org/libtorch/cpu/libtorch-cxx11-abi-shared-with-deps-1.11.0%2Bcpu.zip
-unzip libtorch-cxx11-abi-shared-with-deps-1.11.0%2Bcpu.zip
+unzip libtorch-cxx11-abi-shared-with-deps-1.11.0+cpu.zip
 mv libtorch/ PATH/YOLO_ORB_SLAM3/Thirdparty/
 ```
 
@@ -58,10 +58,15 @@ Add the path including *Examples/ROS/YOLO_ORB_SLAM3* to the ROS_PACKAGE_PATH env
 ```bash
 gedit ~/.bashrc
 ```
-and add at the end the following line. Replace PATH by the folder where you cloned YOLO_ORB_SLAM3:
+scroll all the way to the end and add the following line
 ```bash
-export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:PATH/YOLO_ORB_SLAM3/Examples/ROS
+export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:$HOME/Projects/YOLO_ORB_SLAM3/Examples/ROS
 ```
+Save and close the editor, then apply the changes to your current terminal session:
+```bash
+source ~/.bashrc
+```
+
 Then build
 ```bash
 chmod +x build_ros.sh
